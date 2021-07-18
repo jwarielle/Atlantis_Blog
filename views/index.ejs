@@ -1,0 +1,31 @@
+<%- include("partials/header"); -%>
+
+  <div class="title-section">
+    <!-- <img class="cloud-img" src="/images/cloud.png" alt=""> -->
+    <img src="/images/island.jpg" alt="">
+    <div class="title-content">
+      <h1 class="main-title">Finding Atlantis</h1>
+      <p class="title-paragraph">The Blog Dedicated to the Search for the Lost Continent</p>
+    </div>
+    <!-- <img class="cloud-img-one" src="/images/cloud.png" alt=""> -->
+  </div>
+
+  <div class="row row-margin">
+    <div class="col-lg-2 col-md-1">
+    </div>
+
+    <div class="col-lg-8 col-md-10">
+
+      <% for (var i=0; i<posts.length; i++) { %>
+        <div class="post-container">
+          <h2> <%= posts[i].title %> </h2>
+          <p> <%= posts[i].content.substring(0, 100) %>...<a href= "/posts/<%= posts[i]._id %>"> Read More</a></p>
+        </div>
+      <% } %>
+    </div>
+
+    <div class="col-lg-2 col-md-1">
+    </div>
+  </div>
+
+<%- include("partials/footer"); -%>
